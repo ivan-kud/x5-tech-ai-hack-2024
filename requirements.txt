@@ -1,0 +1,27 @@
+# *** Requirements for inference ***
+accelerate==0.30.1
+catboost==1.2.5
+pandas==2.2.2
+protobuf==4.25.3
+sentencepiece==0.2.0
+torch==2.3.0
+tqdm==4.66.4
+transformers==4.41.1
+
+# *** Requirements for backend ***
+# fastapi==0.111.0
+# pydantic==2.7.1
+# uvicorn==0.29.0
+
+# *** Requirements for training and development ***
+# datasets==2.19.1
+# evaluate==0.4.2
+# huggingface-hub==0.23.1
+# ipykernel==6.29.4
+# ipywidgets==8.1.2
+# nvitop==1.3.2
+# numpy==1.26.4
+# optuna==3.6.1
+# python-dotenv==1.0.1
+# scikit-learn==1.5.0
+# wandb==0.12.16
