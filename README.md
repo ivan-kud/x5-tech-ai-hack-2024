@@ -1,8 +1,25 @@
-# Hallucination Detection Task
+# X5 Tech AI Hackathon - Hallucination Detection Task
+
+## Task description
+
+This is the third place solution in the hackathon with a prize fund of ₽2,000,000. The name of our team is "DeepPavlov Lab". [The liderboard](https://codenrock.com/contests/x5tech-aihack#/rating/2922).
+
+Participants had to create a system for detecting hallucinations of neural networks. There were the following requirements for competitors' solutions: the system must run on the CPU in a Docker container without the Internet access; 8 GB of RAM available.
+
+There are the following columns in the training set:
+
+- context (summary of the Russian Wikipedia text)
+- question about the context
+- answer of the neural network
+- binary label (hallucination or not)
+
+The binary label in the test set had to be predicted.
 
 ## Solution description
 
-To solve the problem, models with transformer-based architecture pre-trained for the NLI task were selected. Next, each of them was additionally trained on the training set.
+The presentation file of the solution is in the `info` directory.
+
+To solve the problem, models with transformer-based architecture pre-trained for the Natural Language Inference (NLI) task were selected. Next, each of them was additionally trained on the training set.
 
 To evaluate on the test set, two approaches were used:
 
@@ -32,10 +49,6 @@ For each of the three above models, the fine-tuning process was the same:
 - the model was additionally trained one more time (final) on the entire training set.
 
 The repository contains a file for fine-tuning and a file with hyperparameters (see "Repository structure").
-
-[HF Hub with fine-tuned models](https://huggingface.co/ivankud)
-
-[wandb graphics](https://wandb.ai/ivankud/X5-HACK)
 
 ## Backend description
 
@@ -81,6 +94,7 @@ The backend will be available locally on port 8000 via the link [http://127.0.0.
 ├── data                        # dataset
 ├── info
 │   └── training_params.md      # fine-tuning hyperparameters
+│   └── presentation.pptx       # solution presentation
 ├── metamodel
 │   ├── train-data              # metamodel training data
 │   └── metamodel.cbm           # metamodel
